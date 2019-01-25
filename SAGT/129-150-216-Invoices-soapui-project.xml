@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="dfc3b449-c21e-4e7f-9e83-67365db3fcd6" activeEnvironment="Default" name="129.150.216-Invoices" soapui-version="5.4.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="9c629eb6-b672-49e3-ae62-0a2a5b15f817" wsaVersion="NONE" name="CreateInvoiceProcdureBPELBinding" type="wsdl" bindingName="{http://xmlns.oracle.com/NavisInterfaces/NavisCreateInvoiceProcedure/CreateInvoiceProcdureBPEL}CreateInvoiceProcdureBPELBinding" soapVersion="1_1" anonymous="optional" definition="http://129.150.216.147:9073/soa-infra/services/NavisIntegration/NavisCreateInvoiceProcedure/createinvoiceprocdurebpel_client_ep?WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://129.150.216.147:9073/soa-infra/services/NavisIntegration/NavisCreateInvoiceProcedure/createinvoiceprocdurebpel_client_ep?WSDL"><con:part><con:url>http://129.150.216.147:9073/soa-infra/services/NavisIntegration/NavisCreateInvoiceProcedure/createinvoiceprocdurebpel_client_ep?WSDL</con:url><con:content><![CDATA[<wsdl:definitions name="CreateInvoiceProcdureBPEL" targetNamespace="http://xmlns.oracle.com/NavisInterfaces/NavisCreateInvoiceProcedure/CreateInvoiceProcdureBPEL" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:client="http://xmlns.oracle.com/NavisInterfaces/NavisCreateInvoiceProcedure/CreateInvoiceProcdureBPEL" xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:documentation>
+    <abstractWSDL>http://129.150.216.147:9073/soa-infra/services/NavisIntegration/NavisCreateInvoiceProcedure!1.0/WSDLs/CreateInvoiceProcdureBPEL.wsdl</abstractWSDL>
+  </wsdl:documentation>
+  <plnk:partnerLinkType name="CreateInvoiceProcdureBPEL">
+    <plnk:role name="CreateInvoiceProcdureBPELProvider" portType="client:CreateInvoiceProcdureBPEL"/>
+  </plnk:partnerLinkType>
+  <wsdl:types>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema">
+      <import namespace="http://xmlns.oracle.com/NavisInterfaces/NavisCreateInvoiceProcedure/CreateInvoiceProcdureBPEL" schemaLocation="http://129.150.216.147:9073/soa-infra/services/NavisIntegration/NavisCreateInvoiceProcedure/createinvoiceprocdurebpel_client_ep?XSD=../Schemas/CreateInvoiceProcdureBPEL.xsd"/>
+    </schema>
+  </wsdl:types>
+  <wsdl:message name="CreateInvoiceProcdureBPELRequestMessage">
+    <wsdl:part name="payload" element="client:process"/>
+  </wsdl:message>
+  <wsdl:message name="CreateInvoiceProcdureBPELResponseMessage">
+    <wsdl:part name="payload" element="client:processResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="CreateInvoiceProcdureBPEL">
+    <wsdl:operation name="process">
+      <wsdl:input message="client:CreateInvoiceProcdureBPELRequestMessage"/>
+      <wsdl:output message="client:CreateInvoiceProcdureBPELResponseMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CreateInvoiceProcdureBPELBinding" type="client:CreateInvoiceProcdureBPEL">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="process">
+      <soap:operation style="document" soapAction="process"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="createinvoiceprocdurebpel_client_ep">
+    <wsdl:port name="CreateInvoiceProcdureBPEL_pt" binding="client:CreateInvoiceProcdureBPELBinding">
+      <soap:address location="http://129.150.216.147:9073/soa-infra/services/NavisIntegration/NavisCreateInvoiceProcedure/createinvoiceprocdurebpel_client_ep"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://129.150.216.147:9073/soa-infra/services/NavisIntegration/NavisCreateInvoiceProcedure/createinvoiceprocdurebpel_client_ep?XSD=../Schemas/CreateInvoiceProcdureBPEL.xsd</con:url><con:content><![CDATA[<schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://xmlns.oracle.com/NavisInterfaces/NavisCreateInvoiceProcedure/CreateInvoiceProcdureBPEL" xmlns="http://www.w3.org/2001/XMLSchema">
+  <element name="process">
+    <complexType>
+      <sequence>
+        <element name="P_ID" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_SUB_TYPE" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_NBR" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_PREPARED" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_SORDER_ID" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_CUST_ID" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_TRADE_ID" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_CONTR_ID" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_SCHV_CARRIER_TYPE" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_SCHV_VISITOR" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_SCHV_VOYAGE" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_SCHV_CALL" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_TOTAL" type="decimal" minOccurs="0" nillable="true"/>
+        <element name="P_FINAL" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_BATCH" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_NOTE" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_CREATED" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_CREATOR" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_CHANGED" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_CHANGER" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_SRVC_ID" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_EXTRACT_BATCH" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_VALUE_ADDED_TAX" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_BL_NBR" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_DELIVERY_ORDER_NBR" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_TYPE" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_TAX_CODE" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_FTAX_GKEY" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_CRNC_ID" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_COST_CENTER" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_PAID" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_BILL_TO" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_TAX_CLASS_ID" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_CUST_ID2" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_CURRENCY_FACTOR" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_INVTYPE_ID" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_PERFORMED_FM" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_PERFORMED_TO" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_SHIP_TYPE" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_BL_GKEY" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_REFERENCE" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_PARENT_INVOICE_ID" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_TERMINAL_ID" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_DISCOUNT_PCT" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_NBR_ALIAS" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_INVOICES_SETUP_ID" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_ORIGINAL_INVOICE_ID" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_BERTH_ID" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_LOCATION_ID" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_FLAG" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_INV_LINES_ITEM" maxOccurs="unbounded">
+          <complexType>
+            <sequence>
+              <element name="INVOICE_ID" type="string" minOccurs="0" nillable="true"/>
+              <element name="SEQ" type="string" minOccurs="0" nillable="true"/>
+              <element name="TITEM_ID" type="string" minOccurs="0" nillable="true"/>
+              <element name="TITEM_DESCRIPTION" type="string" minOccurs="0" nillable="true"/>
+              <element name="QTY_PROVIDED" type="decimal" minOccurs="0" nillable="true"/>
+              <element name="QTY_BILLED" type="decimal" minOccurs="0" nillable="true"/>
+              <element name="TRATE_RATE" type="decimal" minOccurs="0" nillable="true"/>
+              <element name="RATE_CHARGED" type="string" minOccurs="0" nillable="true"/>
+              <element name="AMOUNT" type="string" minOccurs="0" nillable="true"/>
+              <element name="FINALE" type="string" minOccurs="0" nillable="true"/>
+              <element name="TRATE_GKEY" type="string" minOccurs="0" nillable="true"/>
+              <element name="SORDER_ID" type="string" minOccurs="0" nillable="true"/>
+              <element name="SOIT_SEQ" type="string" minOccurs="0" nillable="true"/>
+              <element name="CREATED" type="dateTime" minOccurs="0" nillable="true"/>
+              <element name="CREATOR" type="string" minOccurs="0" nillable="true"/>
+              <element name="CHANGED" type="string" minOccurs="0" nillable="true"/>
+              <element name="CHANGER" type="string" minOccurs="0" nillable="true"/>
+              <element name="PERCENT" type="string" minOccurs="0" nillable="true"/>
+              <element name="EQUSE_GKEY" type="string" minOccurs="0" nillable="true"/>
+              <element name="VALUE_ADDED_TAX" type="string" minOccurs="0" nillable="true"/>
+              <element name="PTD" type="string" minOccurs="0" nillable="true"/>
+              <element name="CRNC_ID" type="string" minOccurs="0" nillable="true"/>
+              <element name="FACTOR" type="string" minOccurs="0" nillable="true"/>
+              <element name="WEIGHT" type="string" minOccurs="0" nillable="true"/>
+              <element name="UNITS" type="string" minOccurs="0" nillable="true"/>
+              <element name="HIDDEN_TAX" type="string" minOccurs="0" nillable="true"/>
+              <element name="PRIOR_PTD" type="string" minOccurs="0" nillable="true"/>
+              <element name="BL_STOR_GKEY" type="string" minOccurs="0" nillable="true"/>
+              <element name="CURRENCY_FACTOR" type="string" minOccurs="0" nillable="true"/>
+              <element name="BL_LOT_GKEY" type="string" minOccurs="0" nillable="true"/>
+              <element name="BL_LOT_QTY" type="string" minOccurs="0" nillable="true"/>
+              <element name="LAST_DATE" type="string" minOccurs="0" nillable="true"/>
+              <element name="LAST_DAY" type="string" minOccurs="0" nillable="true"/>
+              <element name="ADJUSTED_WEIGHT" type="string" minOccurs="0" nillable="true"/>
+              <element name="DISCOUNT_AMOUNT" type="string" minOccurs="0" nillable="true"/>
+              <element name="BL_UNIT_ID" type="string" minOccurs="0" nillable="true"/>
+              <element name="BL_GKEY" type="string" minOccurs="0" nillable="true"/>
+              <element name="BL_ITEM" type="string" minOccurs="0" nillable="true"/>
+              <element name="PARENT_INVOICE_ID" type="string" minOccurs="0" nillable="true"/>
+              <element name="BILL_TO_RULES_GKEY" type="string" minOccurs="0" nillable="true"/>
+              <element name="GENERAL_LEDGER_CODE" type="string" minOccurs="0" nillable="true"/>
+              <element name="REVENUE_CODE" type="string" minOccurs="0" nillable="true"/>
+              <element name="TERMINAL_ID" type="string" minOccurs="0" nillable="true"/>
+            </sequence>
+          </complexType>
+        </element>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="processResponse">
+    <complexType>
+      <sequence>
+        <element name="P_STATUS" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_ERROR" type="string" minOccurs="0" nillable="true"/>
+      </sequence>
+    </complexType>
+  </element>
+</schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://129.150.216.147:9073/soa-infra/services/NavisIntegration/NavisCreateInvoiceProcedure/createinvoiceprocdurebpel_client_ep</con:endpoint></con:endpoints><con:operation id="61884ced-40e0-47ae-b00b-509bebf8a0c6" isOneWay="false" action="process" name="process" bindingOperationName="process" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="68f77e55-b8cb-4f2a-9cf1-c4e327f76cee" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://129.150.216.147:9073/soa-infra/services/NavisIntegration/NavisCreateInvoiceProcedure/createinvoiceprocdurebpel_client_ep</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:cre="http://xmlns.oracle.com/NavisInterfaces/NavisCreateInvoiceProcedure/CreateInvoiceProcdureBPEL">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <cre:process>\r
+         <!--Optional:-->\r
+         <cre:P_ID>172</cre:P_ID>\r
+         <!--Optional:-->\r
+         <cre:P_SUB_TYPE>rrrr</cre:P_SUB_TYPE>\r
+         <!--Optional:-->\r
+         <cre:P_NBR>20172</cre:P_NBR>\r
+         <!--Optional:-->\r
+         <cre:P_PREPARED>2018-10-29</cre:P_PREPARED>\r
+         <!--Optional:-->\r
+         <cre:P_SORDER_ID></cre:P_SORDER_ID>\r
+         <!--Optional:-->\r
+         <cre:P_CUST_ID></cre:P_CUST_ID>\r
+         <!--Optional:-->\r
+         <cre:P_TRADE_ID></cre:P_TRADE_ID>\r
+         <!--Optional:-->\r
+         <cre:P_CONTR_ID></cre:P_CONTR_ID>\r
+         <!--Optional:-->\r
+         <cre:P_SCHV_CARRIER_TYPE></cre:P_SCHV_CARRIER_TYPE>\r
+         <!--Optional:-->\r
+         <cre:P_SCHV_VISITOR></cre:P_SCHV_VISITOR>\r
+         <!--Optional:-->\r
+         <cre:P_SCHV_VOYAGE></cre:P_SCHV_VOYAGE>\r
+         <!--Optional:-->\r
+         <cre:P_SCHV_CALL></cre:P_SCHV_CALL>\r
+         <!--Optional:-->\r
+         <cre:P_TOTAL></cre:P_TOTAL>\r
+         <!--Optional:-->\r
+         <cre:P_FINAL></cre:P_FINAL>\r
+         <!--Optional:-->\r
+         <cre:P_BATCH></cre:P_BATCH>\r
+         <!--Optional:-->\r
+         <cre:P_NOTE></cre:P_NOTE>\r
+         <!--Optional:-->\r
+         <cre:P_CREATED>2018-10-29</cre:P_CREATED>\r
+         <!--Optional:-->\r
+         <cre:P_CREATOR>SYSADMIN</cre:P_CREATOR>\r
+         <!--Optional:-->\r
+         <cre:P_CHANGED></cre:P_CHANGED>\r
+         <!--Optional:-->\r
+         <cre:P_CHANGER></cre:P_CHANGER>\r
+         <!--Optional:-->\r
+         <cre:P_SRVC_ID></cre:P_SRVC_ID>\r
+         <!--Optional:-->\r
+         <cre:P_EXTRACT_BATCH></cre:P_EXTRACT_BATCH>\r
+         <!--Optional:-->\r
+         <cre:P_VALUE_ADDED_TAX></cre:P_VALUE_ADDED_TAX>\r
+         <!--Optional:-->\r
+         <cre:P_BL_NBR></cre:P_BL_NBR>\r
+         <!--Optional:-->\r
+         <cre:P_DELIVERY_ORDER_NBR></cre:P_DELIVERY_ORDER_NBR>\r
+         <!--Optional:-->\r
+         <cre:P_TYPE></cre:P_TYPE>\r
+         <!--Optional:-->\r
+         <cre:P_TAX_CODE></cre:P_TAX_CODE>\r
+         <!--Optional:-->\r
+         <cre:P_FTAX_GKEY></cre:P_FTAX_GKEY>\r
+         <!--Optional:-->\r
+         <cre:P_CRNC_ID>LKR</cre:P_CRNC_ID>\r
+         <!--Optional:-->\r
+         <cre:P_COST_CENTER></cre:P_COST_CENTER>\r
+         <!--Optional:-->\r
+         <cre:P_PAID></cre:P_PAID>\r
+         <!--Optional:-->\r
+         <cre:P_BILL_TO></cre:P_BILL_TO>\r
+         <!--Optional:-->\r
+         <cre:P_TAX_CLASS_ID></cre:P_TAX_CLASS_ID>\r
+         <!--Optional:-->\r
+         <cre:P_CUST_ID2></cre:P_CUST_ID2>\r
+         <!--Optional:-->\r
+         <cre:P_CURRENCY_FACTOR></cre:P_CURRENCY_FACTOR>\r
+         <!--Optional:-->\r
+         <cre:P_INVTYPE_ID></cre:P_INVTYPE_ID>\r
+         <!--Optional:-->\r
+         <cre:P_PERFORMED_FM></cre:P_PERFORMED_FM>\r
+         <!--Optional:-->\r
+         <cre:P_PERFORMED_TO></cre:P_PERFORMED_TO>\r
+         <!--Optional:-->\r
+         <cre:P_SHIP_TYPE></cre:P_SHIP_TYPE>\r
+         <!--Optional:-->\r
+         <cre:P_BL_GKEY></cre:P_BL_GKEY>\r
+         <!--Optional:-->\r
+         <cre:P_REFERENCE></cre:P_REFERENCE>\r
+         <!--Optional:-->\r
+         <cre:P_PARENT_INVOICE_ID></cre:P_PARENT_INVOICE_ID>\r
+         <!--Optional:-->\r
+         <cre:P_TERMINAL_ID></cre:P_TERMINAL_ID>\r
+         <!--Optional:-->\r
+         <cre:P_DISCOUNT_PCT></cre:P_DISCOUNT_PCT>\r
+         <!--Optional:-->\r
+         <cre:P_NBR_ALIAS></cre:P_NBR_ALIAS>\r
+         <!--Optional:-->\r
+         <cre:P_INVOICES_SETUP_ID></cre:P_INVOICES_SETUP_ID>\r
+         <!--Optional:-->\r
+         <cre:P_ORIGINAL_INVOICE_ID></cre:P_ORIGINAL_INVOICE_ID>\r
+         <!--Optional:-->\r
+         <cre:P_BERTH_ID></cre:P_BERTH_ID>\r
+         <!--Optional:-->\r
+         <cre:P_LOCATION_ID></cre:P_LOCATION_ID>\r
+         <!--Optional:-->\r
+         <cre:P_FLAG></cre:P_FLAG>\r
+         <!--1 or more repetitions:-->\r
+         <cre:P_INV_LINES_ITEM>\r
+            <!--Optional:-->\r
+            <cre:INVOICE_ID>172</cre:INVOICE_ID>\r
+            <!--Optional:-->\r
+            <cre:SEQ>1</cre:SEQ>\r
+            <!--Optional:-->\r
+            <cre:TITEM_ID>4</cre:TITEM_ID>\r
+            <!--Optional:-->\r
+            <cre:TITEM_DESCRIPTION>Test2222</cre:TITEM_DESCRIPTION>\r
+            <!--Optional:-->\r
+            <cre:QTY_PROVIDED></cre:QTY_PROVIDED>\r
+            <!--Optional:-->\r
+            <cre:QTY_BILLED>220</cre:QTY_BILLED>\r
+            <!--Optional:-->\r
+            <cre:TRATE_RATE></cre:TRATE_RATE>\r
+            <!--Optional:-->\r
+            <cre:RATE_CHARGED></cre:RATE_CHARGED>\r
+            <!--Optional:-->\r
+            <cre:AMOUNT>1000</cre:AMOUNT>\r
+            <!--Optional:-->\r
+            <cre:FINALE></cre:FINALE>\r
+            <!--Optional:-->\r
+            <cre:TRATE_GKEY></cre:TRATE_GKEY>\r
+            <!--Optional:-->\r
+            <cre:SORDER_ID></cre:SORDER_ID>\r
+            <!--Optional:-->\r
+            <cre:SOIT_SEQ></cre:SOIT_SEQ>\r
+            <!--Optional:-->\r
+            <cre:CREATED></cre:CREATED>\r
+            <!--Optional:-->\r
+            <cre:CREATOR></cre:CREATOR>\r
+            <!--Optional:-->\r
+            <cre:CHANGED></cre:CHANGED>\r
+            <!--Optional:-->\r
+            <cre:CHANGER></cre:CHANGER>\r
+            <!--Optional:-->\r
+            <cre:PERCENT></cre:PERCENT>\r
+            <!--Optional:-->\r
+            <cre:EQUSE_GKEY></cre:EQUSE_GKEY>\r
+            <!--Optional:-->\r
+            <cre:VALUE_ADDED_TAX></cre:VALUE_ADDED_TAX>\r
+            <!--Optional:-->\r
+            <cre:PTD></cre:PTD>\r
+            <!--Optional:-->\r
+            <cre:CRNC_ID></cre:CRNC_ID>\r
+            <!--Optional:-->\r
+            <cre:FACTOR></cre:FACTOR>\r
+            <!--Optional:-->\r
+            <cre:WEIGHT></cre:WEIGHT>\r
+            <!--Optional:-->\r
+            <cre:UNITS></cre:UNITS>\r
+            <!--Optional:-->\r
+            <cre:HIDDEN_TAX></cre:HIDDEN_TAX>\r
+            <!--Optional:-->\r
+            <cre:PRIOR_PTD></cre:PRIOR_PTD>\r
+            <!--Optional:-->\r
+            <cre:BL_STOR_GKEY></cre:BL_STOR_GKEY>\r
+            <!--Optional:-->\r
+            <cre:CURRENCY_FACTOR></cre:CURRENCY_FACTOR>\r
+            <!--Optional:-->\r
+            <cre:BL_LOT_GKEY></cre:BL_LOT_GKEY>\r
+            <!--Optional:-->\r
+            <cre:BL_LOT_QTY></cre:BL_LOT_QTY>\r
+            <!--Optional:-->\r
+            <cre:LAST_DATE></cre:LAST_DATE>\r
+            <!--Optional:-->\r
+            <cre:LAST_DAY></cre:LAST_DAY>\r
+            <!--Optional:-->\r
+            <cre:ADJUSTED_WEIGHT></cre:ADJUSTED_WEIGHT>\r
+            <!--Optional:-->\r
+            <cre:DISCOUNT_AMOUNT></cre:DISCOUNT_AMOUNT>\r
+            <!--Optional:-->\r
+            <cre:BL_UNIT_ID></cre:BL_UNIT_ID>\r
+            <!--Optional:-->\r
+            <cre:BL_GKEY></cre:BL_GKEY>\r
+            <!--Optional:-->\r
+            <cre:BL_ITEM></cre:BL_ITEM>\r
+            <!--Optional:-->\r
+            <cre:PARENT_INVOICE_ID></cre:PARENT_INVOICE_ID>\r
+            <!--Optional:-->\r
+            <cre:BILL_TO_RULES_GKEY></cre:BILL_TO_RULES_GKEY>\r
+            <!--Optional:-->\r
+            <cre:GENERAL_LEDGER_CODE></cre:GENERAL_LEDGER_CODE>\r
+            <!--Optional:-->\r
+            <cre:REVENUE_CODE></cre:REVENUE_CODE>\r
+            <!--Optional:-->\r
+            <cre:TERMINAL_ID></cre:TERMINAL_ID>\r
+         </cre:P_INV_LINES_ITEM>\r
+      </cre:process>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="process"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>

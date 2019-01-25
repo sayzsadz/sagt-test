@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="d8aa0796-66e8-4ffc-b2aa-a47b03667bc4" activeEnvironment="Default" name="129.150.216-Customer Creation" soapui-version="5.4.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="5799aa96-5604-42bf-a46f-413a99d64f0d" wsaVersion="NONE" name="NavisCustomerInfoBPELBinding" type="wsdl" bindingName="{http://xmlns.oracle.com/NavisInterfaces/NavisCUstomerInfoIntegration/NavisCustomerInfoBPEL}NavisCustomerInfoBPELBinding" soapVersion="1_1" anonymous="optional" definition="http://129.150.216.147:9073/soa-infra/services/NavisIntegration/NavisCUstomerInfoIntegration/naviscustomerinfo_ep?WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://129.150.216.147:9073/soa-infra/services/NavisIntegration/NavisCUstomerInfoIntegration/naviscustomerinfo_ep?WSDL"><con:part><con:url>http://129.150.216.147:9073/soa-infra/services/NavisIntegration/NavisCUstomerInfoIntegration/naviscustomerinfo_ep?WSDL</con:url><con:content><![CDATA[<wsdl:definitions name="NavisCustomerInfoBPEL" targetNamespace="http://xmlns.oracle.com/NavisInterfaces/NavisCUstomerInfoIntegration/NavisCustomerInfoBPEL" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:client="http://xmlns.oracle.com/NavisInterfaces/NavisCUstomerInfoIntegration/NavisCustomerInfoBPEL" xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:documentation>
+    <abstractWSDL>http://129.150.216.147:9073/soa-infra/services/NavisIntegration/NavisCUstomerInfoIntegration!1.0/WSDLs/NavisCustomerInfoBPEL.wsdl</abstractWSDL>
+  </wsdl:documentation>
+  <plnk:partnerLinkType name="NavisCustomerInfoBPEL">
+    <plnk:role name="NavisCustomerInfoBPELProvider" portType="client:NavisCustomerInfoBPEL"/>
+  </plnk:partnerLinkType>
+  <wsdl:types>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema">
+      <import namespace="http://xmlns.oracle.com/NavisInterfaces/NavisCUstomerInfoIntegration/NavisCustomerInfoBPEL" schemaLocation="http://129.150.216.147:9073/soa-infra/services/NavisIntegration/NavisCUstomerInfoIntegration/naviscustomerinfo_ep?XSD=../Schemas/NavisCustomerInfoBPEL.xsd"/>
+    </schema>
+  </wsdl:types>
+  <wsdl:message name="NavisCustomerInfoBPELRequestMessage">
+    <wsdl:part name="payload" element="client:process"/>
+  </wsdl:message>
+  <wsdl:message name="NavisCustomerInfoBPELResponseMessage">
+    <wsdl:part name="payload" element="client:processResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="NavisCustomerInfoBPEL">
+    <wsdl:operation name="process">
+      <wsdl:input message="client:NavisCustomerInfoBPELRequestMessage"/>
+      <wsdl:output message="client:NavisCustomerInfoBPELResponseMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NavisCustomerInfoBPELBinding" type="client:NavisCustomerInfoBPEL">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="process">
+      <soap:operation style="document" soapAction="process"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="naviscustomerinfo_ep">
+    <wsdl:port name="NavisCustomerInfoBPEL_pt" binding="client:NavisCustomerInfoBPELBinding">
+      <soap:address location="http://129.150.216.147:9073/soa-infra/services/NavisIntegration/NavisCUstomerInfoIntegration/naviscustomerinfo_ep"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://129.150.216.147:9073/soa-infra/services/NavisIntegration/NavisCUstomerInfoIntegration/naviscustomerinfo_ep?XSD=../Schemas/NavisCustomerInfoBPEL.xsd</con:url><con:content><![CDATA[<schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://xmlns.oracle.com/NavisInterfaces/NavisCUstomerInfoIntegration/NavisCustomerInfoBPEL" xmlns="http://www.w3.org/2001/XMLSchema">
+  <element name="process">
+    <complexType>
+      <sequence>
+        <element name="P_ID" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_SCAC" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_BIC_CODE" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_NAME" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_ADDRESS_LINE_1" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_ADDRESS_LINE_2" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_ADDRESS_LINE_3" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_CITY" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_STATE" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_COUNTRY_ID" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_MAIL_CODE" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_TEL" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_FAX" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_CONTACT" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_TITLE" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_ACTIVE" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_ACTIVE_ON_SPARCS" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_NOTES" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_CREATED" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_CREATOR" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_CHANGED" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_CHANGER" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_DEBTOR_NBR" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_PAYMENT_NBR" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_PAYMENT_CYCLE" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_ACCOUNT_TYPE" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_ACCOUNT_STATUS" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_NATIONAL_ID" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_ACCOUNT_CODE" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_TAX_ID" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_FREEPOOL_ALLOWANCE" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_TAX_ID_TYPE" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_TAX_CLASS" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_LINE_PDIEM_DRY_FFDAYS" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_LINE_PDIEM_REEFER_FFDAYS" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_LINE_PDIEM_DRY_LFDAYS" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_LINE_PDIEM_REEFER_LFDAYS" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_CRNC_ID" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_AGENT_ID" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_BUSINESS_ID1" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_BUSINESS_ID2" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_LONG_NAME" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_EMAIL_ADDRESS" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_MTY_RETURN_LOC_ID" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_USER_GROUP_ID" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_EXPORT_FREEPOOL" type="decimal" minOccurs="0" nillable="true"/>
+        <element name="P_OTHER_NAME" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_OTHER_ADDRESS_LINE_1" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_OTHER_ADDRESS_LINE_2" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_OTHER_ADDRESS_LINE_3" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_OTHER_CITY" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_OTHER_STATE" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_OTHER_COUNTRY_ID" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_OTHER_MAIL_CODE" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_OPERATION" type="string" minOccurs="0" nillable="true"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="processResponse">
+    <complexType>
+      <sequence>
+        <element name="P_STATUS" type="string" minOccurs="0" nillable="true"/>
+        <element name="P_ERROR" type="string" minOccurs="0" nillable="true"/>
+      </sequence>
+    </complexType>
+  </element>
+</schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://129.150.216.147:9073/soa-infra/services/NavisIntegration/NavisCUstomerInfoIntegration/naviscustomerinfo_ep</con:endpoint></con:endpoints><con:operation id="f8f443c7-8427-4dd3-a3a5-3d1ba2ea2b07" isOneWay="false" action="process" name="process" bindingOperationName="process" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="77c1a714-6fb3-412d-b646-717696d27bba" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://129.150.216.147:9073/soa-infra/services/NavisIntegration/NavisCUstomerInfoIntegration/naviscustomerinfo_ep</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nav="http://xmlns.oracle.com/NavisInterfaces/NavisCUstomerInfoIntegration/NavisCustomerInfoBPEL">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <nav:process>\r
+         <!--Optional:-->\r
+         <nav:P_ID>170</nav:P_ID>\r
+         <!--Optional:-->\r
+         <nav:P_SCAC>SCAC</nav:P_SCAC>\r
+         <!--Optional:-->\r
+         <nav:P_BIC_CODE>BIC</nav:P_BIC_CODE>\r
+         <!--Optional:-->\r
+         <nav:P_NAME>TEST ORG 251</nav:P_NAME>\r
+         <!--Optional:-->\r
+         <nav:P_ADDRESS_LINE_1>Test City 251</nav:P_ADDRESS_LINE_1>\r
+         <!--Optional:-->\r
+         <nav:P_ADDRESS_LINE_2>Colombo 3</nav:P_ADDRESS_LINE_2>\r
+         <!--Optional:-->\r
+         <nav:P_ADDRESS_LINE_3>Colombo 3</nav:P_ADDRESS_LINE_3>\r
+         <!--Optional:-->\r
+         <nav:P_CITY>Colombo</nav:P_CITY>\r
+         <!--Optional:-->\r
+         <nav:P_STATE>CP</nav:P_STATE>\r
+         <!--Optional:-->\r
+         <nav:P_COUNTRY_ID>LK</nav:P_COUNTRY_ID>\r
+         <!--Optional:-->\r
+         <nav:P_MAIL_CODE>MC</nav:P_MAIL_CODE>\r
+         <!--Optional:-->\r
+         <nav:P_TEL>0774553454</nav:P_TEL>\r
+         <!--Optional:-->\r
+         <nav:P_FAX>042325235</nav:P_FAX>\r
+         <!--Optional:-->\r
+         <nav:P_CONTACT>TestC2</nav:P_CONTACT>\r
+         <!--Optional:-->\r
+         <nav:P_TITLE></nav:P_TITLE>\r
+         <!--Optional:-->\r
+         <nav:P_ACTIVE>A</nav:P_ACTIVE>\r
+         <!--Optional:-->\r
+         <nav:P_ACTIVE_ON_SPARCS>Y</nav:P_ACTIVE_ON_SPARCS>\r
+         <!--Optional:-->\r
+         <nav:P_NOTES></nav:P_NOTES>\r
+         <!--Optional:-->\r
+         <nav:P_CREATED>2018-10-01</nav:P_CREATED>\r
+         <!--Optional:-->\r
+         <nav:P_CREATOR>D1</nav:P_CREATOR>\r
+         <!--Optional:-->\r
+         <nav:P_CHANGED>2018-10-01</nav:P_CHANGED>\r
+         <!--Optional:-->\r
+         <nav:P_CHANGER>D1</nav:P_CHANGER>\r
+         <!--Optional:-->\r
+         <nav:P_DEBTOR_NBR>222</nav:P_DEBTOR_NBR>\r
+         <!--Optional:-->\r
+         <nav:P_PAYMENT_NBR>333</nav:P_PAYMENT_NBR>\r
+         <!--Optional:-->\r
+         <nav:P_PAYMENT_CYCLE>PC1</nav:P_PAYMENT_CYCLE>\r
+         <!--Optional:-->\r
+         <nav:P_ACCOUNT_TYPE>P</nav:P_ACCOUNT_TYPE>\r
+         <!--Optional:-->\r
+         <nav:P_ACCOUNT_STATUS>A</nav:P_ACCOUNT_STATUS>\r
+         <!--Optional:-->\r
+         <nav:P_NATIONAL_ID>222222</nav:P_NATIONAL_ID>\r
+         <!--Optional:-->\r
+         <nav:P_ACCOUNT_CODE>AC</nav:P_ACCOUNT_CODE>\r
+         <!--Optional:-->\r
+         <nav:P_TAX_ID>TAX2</nav:P_TAX_ID>\r
+         <!--Optional:-->\r
+         <nav:P_FREEPOOL_ALLOWANCE></nav:P_FREEPOOL_ALLOWANCE>\r
+         <!--Optional:-->\r
+         <nav:P_TAX_ID_TYPE></nav:P_TAX_ID_TYPE>\r
+         <!--Optional:-->\r
+         <nav:P_TAX_CLASS></nav:P_TAX_CLASS>\r
+         <!--Optional:-->\r
+         <nav:P_LINE_PDIEM_DRY_FFDAYS></nav:P_LINE_PDIEM_DRY_FFDAYS>\r
+         <!--Optional:-->\r
+         <nav:P_LINE_PDIEM_REEFER_FFDAYS></nav:P_LINE_PDIEM_REEFER_FFDAYS>\r
+         <!--Optional:-->\r
+         <nav:P_LINE_PDIEM_DRY_LFDAYS></nav:P_LINE_PDIEM_DRY_LFDAYS>\r
+         <!--Optional:-->\r
+         <nav:P_LINE_PDIEM_REEFER_LFDAYS></nav:P_LINE_PDIEM_REEFER_LFDAYS>\r
+         <!--Optional:-->\r
+         <nav:P_CRNC_ID>450</nav:P_CRNC_ID>\r
+         <!--Optional:-->\r
+         <nav:P_AGENT_ID>450</nav:P_AGENT_ID>\r
+         <!--Optional:-->\r
+         <nav:P_BUSINESS_ID1>100</nav:P_BUSINESS_ID1>\r
+         <!--Optional:-->\r
+         <nav:P_BUSINESS_ID2>200</nav:P_BUSINESS_ID2>\r
+         <!--Optional:-->\r
+         <nav:P_LONG_NAME>test_org</nav:P_LONG_NAME>\r
+         <!--Optional:-->\r
+         <nav:P_EMAIL_ADDRESS>testadmin@kpmg.com</nav:P_EMAIL_ADDRESS>\r
+         <!--Optional:-->\r
+         <nav:P_MTY_RETURN_LOC_ID></nav:P_MTY_RETURN_LOC_ID>\r
+         <!--Optional:-->\r
+         <nav:P_USER_GROUP_ID></nav:P_USER_GROUP_ID>\r
+         <!--Optional:-->\r
+         <nav:P_EXPORT_FREEPOOL></nav:P_EXPORT_FREEPOOL>\r
+         <!--Optional:-->\r
+         <nav:P_OTHER_NAME></nav:P_OTHER_NAME>\r
+         <!--Optional:-->\r
+         <nav:P_OTHER_ADDRESS_LINE_1></nav:P_OTHER_ADDRESS_LINE_1>\r
+         <!--Optional:-->\r
+         <nav:P_OTHER_ADDRESS_LINE_2></nav:P_OTHER_ADDRESS_LINE_2>\r
+         <!--Optional:-->\r
+         <nav:P_OTHER_ADDRESS_LINE_3></nav:P_OTHER_ADDRESS_LINE_3>\r
+         <!--Optional:-->\r
+         <nav:P_OTHER_CITY></nav:P_OTHER_CITY>\r
+         <!--Optional:-->\r
+         <nav:P_OTHER_STATE></nav:P_OTHER_STATE>\r
+         <!--Optional:-->\r
+         <nav:P_OTHER_COUNTRY_ID></nav:P_OTHER_COUNTRY_ID>\r
+         <!--Optional:-->\r
+         <nav:P_OTHER_MAIL_CODE></nav:P_OTHER_MAIL_CODE>\r
+         <!--Optional:-->\r
+         <nav:P_OPERATION>I</nav:P_OPERATION>\r
+      </nav:process>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="process"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>

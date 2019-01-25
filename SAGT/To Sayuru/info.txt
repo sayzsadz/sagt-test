@@ -1,0 +1,9 @@
+1. Check DAILY_RATE procedure in apex_fusion_integration_pkg package.
+
+Flow:
+-------------
+1. Programmatically Create CSV file in given location in local server/SOA file system
+2. Zip the csv file
+3. Convert zip file to base64 format
+4. Uplod base64 code to UCM folder in fusion.
+5. Run rate upload interface program in fusion.
