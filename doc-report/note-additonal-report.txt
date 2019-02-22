@@ -1,0 +1,19 @@
+1. Update and Report Income Tax Details - Reports on or updates income tax type or income tax region fields on invoice distributions. These fields are used for United States 1099 reporting.
+
+2. Payables Withholding Tax Letter - Creates a withholding tax letter to mail to a supplier on a periodic basis. The letter contains a list of withholdings made for a supplier, summarized either by tax type and tax rate, or by supplier site.
+
+3. Financial Tax Register - Extracts accounting information created in Oracle Fusion Receivables, Oracle Fusion Payables, and Oracle Fusion General Ledger, including the default tax register, interim tax register, and nonrecoverable tax register.
+
+4. Business Unit Tax Report
+
+5. Tax Audit Trail Report - Identifies detail tax and invoice information and the total amounts for each tax rate code in the entered currency and ledger currency.
+
+6. Tax Reconciliation Report - Lists the taxable and tax amounts, by tax account, of all Oracle Fusion Receivables transactions for a given period.
+
+7. Tax Reconciliation by Taxable Account Report - Lists taxable transaction information for Oracle Fusion Payables, Oracle Fusion Receivables, and Oracle Fusion General Ledger transactions. Generates subtotals by taxable account and tax rate code.
+
+8. Tax Register - Identifies total tax amounts by tax type, tax class, and company to includes deferred tax accounting information and all transactions for which tax accounting is defined.
+
+9. Use Tax Liability Report - Identifies the amount of use tax owed to each tax authority for invoices entered during a period in the currency entered on the transaction.
+
+List of Standard BI Publisher Reports available within Oracle Fusion Applications (Doc ID 1458860.1) - https://support.oracle.com/
